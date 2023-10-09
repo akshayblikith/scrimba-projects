@@ -1,0 +1,34 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="title">Basketball Game</h1>
+        <p id="result">Let's Play!</p>
+        <div class="container">
+            <div>
+                <h3 class="hero-text">HOME</h3>
+                <p class="score" id="home-score">0</p>
+                <div class="button-container">
+                    <button class="button" onclick="updateScore(1,'home')">+1</button>
+                    <button class="button" onclick="updateScore(2,'home')">+2</button>
+                    <button class="button" onclick="updateScore(3,'home')">+3</button>
+                </div>
+            </div>
+            <div>
+                <h3 class="hero-text">GUEST</h3>
+                <p class="score" id="away-score">0</p>
+                <div class="button-container">
+                    <button class="button" onclick="updateScore(1,'away')">+1</button>
+                    <button class="button" onclick="updateScore(2,'away')">+2</button>
+                    <button class="button" onclick="updateScore(3,'away')">+3</button>
+                </div>
+            </div>
+        </div>
+        <button class="new-game-button" onclick="newGame()">NEW GAME</button>
+        <script src="index.js"></script>
+    </body>
+</html>

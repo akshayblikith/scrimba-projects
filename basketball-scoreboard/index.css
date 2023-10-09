@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background: linear-gradient(#1B244A, #5864a3);
+    height: 100vh;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.title {
+    font-size: 80px;
+    font-family: 'Press Start 2P', cursive;
+    color: #e98a1d;
+    margin-top: 60px;
+    text-shadow: 15px 10px 0px #121212;
+}
+
+.container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero-text {
+    color: #eee;
+    font-size: 60px;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0px;
+}
+
+.score {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 100px;
+    font-style: normal;
+    color: #e98a1d;
+    background: #121212;
+    padding: 30px 80px;
+    margin: 40px 0px;
+    border-radius: 8px;
+    border: 1px solid #9AABD8;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    padding: 20px;
+    border: 2px solid #9AABD8;
+    border-radius: 8px;
+    background: none;
+    color: #eee;
+    font-size: 20px;
+}
+
+.new-game-button {
+    margin-top: 80px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    background: #e98a1d;
+    color: #121212;
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+#result {
+    margin-top: 60px;
+    font-size: 40px;
+    color: #e98a1d;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 4px 4px 0px #121212;
+}
