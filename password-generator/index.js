@@ -308,33 +308,34 @@ let passwordOne = "";
 let passwordTwo = "";
 let password = [];
 
-generateButton.addEventListener("click", function generatePasswords() {
+generateButton.addEventListener("click", function () {
     if (toggleNumbers.checked === true && toggleSymbols.checked === false) {
-        password = passwordGenerator(charactersNumbers);
+        password = generatePassword(charactersNumbers);
     } else if (
         toggleNumbers.checked === false &&
         toggleSymbols.checked === true
     ) {
-        password = passwordGenerator(charactersSymbols);
+        password = generatePassword(charactersSymbols);
     } else if (
         toggleNumbers.checked === true &&
         toggleSymbols.checked === true
     ) {
-        password = passwordGenerator(charactersSymbolsNumbers);
+        password = generatePassword(charactersSymbolsNumbers);
     } else {
-        password = passwordGenerator(characters);
+        password = generatePassword(characters);
     }
     firstPassword.textContent = password[0];
     secondPassword.textContent = password[1];
 });
 
-function passwordGenerator(arr) {
+function generatePassword(arr) {
+    const lengthValue = passwordLength.value;
     let randomNumber = 0;
     passwordOne = "";
     passwordTwo = "";
-    for (let j = 0; j < passwordLength.value * 2; j++) {
+    for (let j = 0; j < lengthValue * 2; j++) {
         randomNumber = Math.floor(Math.random() * arr.length);
-        if (j < passwordLength.value) {
+        if (j < lengthValue) {
             passwordOne += arr[randomNumber];
         } else {
             passwordTwo += arr[randomNumber];
@@ -343,12 +344,12 @@ function passwordGenerator(arr) {
     return [passwordOne, passwordTwo];
 }
 
-copyPasswordOne.addEventListener("click", function copyPassword() {
+copyPasswordOne.addEventListener("click", function () {
     navigator.clipboard.writeText(passwordOne);
     alert("Copied the password: " + passwordOne);
 });
 
-copyPasswordTwo.addEventListener("click", function copyPassword() {
+copyPasswordTwo.addEventListener("click", function () {
     navigator.clipboard.writeText(passwordTwo);
     alert("Copied the password: " + passwordTwo);
 });
