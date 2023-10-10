@@ -4,7 +4,7 @@ body {
 
     font-family: "Karla", sans-serif;
 
-    margin: 100px 400px;
+    margin: 80px 400px;
     height: 100vh;
 }
 
@@ -25,7 +25,7 @@ body {
 #support-text {
     color: #d5d4d8;
 
-    font-size: 30px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
 
@@ -50,13 +50,13 @@ body {
 #line {
     border: 1px solid #2f3e53;
 
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 .password-container {
     display: flex;
 
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .password {
@@ -76,7 +76,7 @@ body {
 }
 
 #password-two {
-    margin-left: 40px;
+    margin-left: 100px;
 }
 
 #password-length {
@@ -84,22 +84,119 @@ body {
     background: none;
 
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
 
     width: 60px;
 
-    margin-left: 40px;
-    padding: 10px;
+    margin-top: 32px;
+    padding: 8px;
 
     border: 2px solid #d5d4d8;
     border-radius: 4px;
 }
 
+#length-container {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 24px;
+}
+
 #criteria-container {
     display: flex;
-    flex-direction: row;
 
-    margin-top: 160px;
+    margin-top: 140px;
+
+    font-size: 24px;
+}
+
+#criteria-text {
+    margin: 0px;
+}
+
+#toggle-container {
+    display: flex;
+
+    margin-left: 160px;
+
+    flex-direction: column;
+}
+
+#toggle-buttons {
+    display: flex;
+    margin-top: 32px;
+}
+
+#toggle-symbol-container {
+    margin-left: 96px;
+}
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 58px;
+    height: 32px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+}
+.toggle-switch:before,
+.toggle-switch:after {
+    content: "";
+}
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background: #4adf86;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+    left: 30px;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle-label {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.copy-button {
+    color: #ffffff;
+    background: #4adf86;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 8px;
+    border: none;
+
+    width: 80px;
+    height: 70px;
 
     font-size: 20px;
+    text-align: center;
 }
