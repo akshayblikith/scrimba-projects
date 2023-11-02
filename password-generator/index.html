@@ -16,23 +16,51 @@
                 Generate a <span id="cta">random password</span>
             </h1>
             <p id="support-text">Never use an insecure password again.</p>
+
             <div id="criteria-container">
-                <label for="length">Choose the length</label>
-                <input
-                    type="text"
-                    name="password-length"
-                    id="password-length"
-                    placeholder="15" />
+                <div id="length-container">
+                    <label for="length">Choose the length</label>
+                    <input
+                        type="text"
+                        name="password-length"
+                        id="password-length"
+                        placeholder="15" />
+                </div>
+                <div id="toggle-container">
+                    <p id="criteria-text">Should the password include</p>
+                    <div id="toggle-buttons">
+                        <div id="toggle-number-container">
+                            <label class="toggle">
+                                <input
+                                    class="toggle-checkbox"
+                                    type="checkbox"
+                                    id="toggle-numbers" />
+                                <div class="toggle-switch"></div>
+                                <span class="toggle-label">Numbers</span>
+                            </label>
+                        </div>
+                        <div id="toggle-symbol-container">
+                            <label class="toggle">
+                                <input
+                                    class="toggle-checkbox"
+                                    type="checkbox"
+                                    id="toggle-symbols" />
+                                <div class="toggle-switch"></div>
+                                <span class="toggle-label">Symbols</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <button id="generate-button" onclick="generatePasswords()">
-                Generate passwords
-            </button>
+            <button id="generate-button">Generate passwords</button>
         </div>
         <hr id="line" />
         <div class="password-container">
             <p class="password" id="password-one"></p>
+            <button class="copy-button" id="copy-password-one">Copy</button>
             <p class="password" id="password-two"></p>
+            <button class="copy-button" id="copy-password-two">Copy</button>
         </div>
         <script src="index.js"></script>
     </body>
