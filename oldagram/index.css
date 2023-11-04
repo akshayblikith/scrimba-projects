@@ -1,0 +1,104 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    width: 560px;
+    margin: 0 auto;
+    border: 1px solid blue;
+}
+
+/* typography */
+
+h3,
+p {
+    margin: 0;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+/* layout */
+
+.logo {
+    width: 180px;
+    margin: 0;
+}
+
+.user-avatar,
+.post-avatar {
+    width: 48px;
+    border-radius: 50px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style-type: none;
+
+    margin: 0;
+    padding: 10px 25px 15px 20px;
+}
+
+.post-details-container {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+
+    padding: 20px;
+    border-top: 1px solid rgba(104, 104, 104, 0.5);
+}
+
+.post-avatar {
+    align-self: center;
+}
+
+.post-user-details-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.icon-heart,
+.icon-comment,
+.icon-dm {
+    width: 32px;
+}
+
+.post-response-container {
+    display: flex;
+    column-gap: 15px;
+
+    padding: 20px;
+}
+
+.likes-comments-container {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.icon-heart:hover,
+.icon-comment:hover,
+.icon-dm:hover {
+    opacity: 0.5;
+}
+
+.comments-container {
+    display: flex;
+    column-gap: 4px;
+
+    margin-bottom: 20px;
+}
